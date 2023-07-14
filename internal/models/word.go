@@ -1,3 +1,3 @@
 package models
 
-type Word []byte
+type WordBytes []byte

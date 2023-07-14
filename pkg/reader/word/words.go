@@ -7,8 +7,8 @@ CleanWords accepts row text as a slice of bytes
 and returns a slice of "Words" without any unprintable
 characters
 */
-func CleanWords(dirtyText []byte) []models.Word {
-	var cleanWords []models.Word
+func CleanWords(dirtyText []byte) []models.WordBytes {
+	var cleanWords []models.WordBytes
 
 	var tempFiller []byte
 
