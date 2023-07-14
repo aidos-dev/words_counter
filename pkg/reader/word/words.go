@@ -14,7 +14,7 @@ func CleanWords(dirtyText []byte) []models.Word {
 
 	for i := 0; i < len(dirtyText); i++ {
 		if (dirtyText[i] >= 'A' && dirtyText[i] <= 'Z') || (dirtyText[i] >= 'a' && dirtyText[i] <= 'z') {
-			tempFiller = append(tempFiller, dirtyText[i])
+			tempFiller = append(tempFiller, toLow(dirtyText[i]))
 		} else {
 			if len(tempFiller) > 0 {
 				cleanWords = append(cleanWords, tempFiller)
@@ -25,4 +25,16 @@ func CleanWords(dirtyText []byte) []models.Word {
 	}
 
 	return cleanWords
+}
+
+/*
+Calling func toLow for every letter helps to make all words in
+lower case, to make words counting functions case insensitive
+*/
+func toLow(symb byte) byte {
+	if symb >= 'A' && symb <= 'Z' {
+		symb += 32
+	}
+
+	return symb
 }
