@@ -12,7 +12,6 @@ func ReadFile() ([]byte, error) {
 
 	file, err := os.Open(fileName)
 	if err != nil {
-		// TODO: Print error message
 		return nil, err
 	}
 	defer file.Close()
@@ -21,7 +20,6 @@ func ReadFile() ([]byte, error) {
 
 	data, err := ioutil.ReadAll(rd)
 	if err != nil {
-		// TODO: Print error message
 		return nil, err
 	}
 
