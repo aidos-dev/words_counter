@@ -1,6 +1,7 @@
 package app
 
 import (
+	"os"
 	"sort"
 
 	"github.com/aidos-dev/words_counter/internal/models"
@@ -12,6 +13,10 @@ import (
 )
 
 func Run() {
+
+	if len(os.Args) != 2 {
+		return
+	}
 
 	text, err := file.ReadFile()
 	if err != nil {
