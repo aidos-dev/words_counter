@@ -20,7 +20,7 @@ To run the program do the following steps:
 go run cmd/main.go <fileName>.txt
 ```
 
-The "<fileName>" should be replaced with the actual name of the file that you want to analyse.
+The <fileName> should be replaced with the actual name of the file that you want to analyse.
 
 Example: 
 
