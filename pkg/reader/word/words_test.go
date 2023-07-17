@@ -43,7 +43,7 @@ func Test_CleanWords(t *testing.T) {
 		}
 
 		if !reflect.DeepEqual(tc.expectedWords, receivedWords) {
-			t.Errorf("Test case %s failed: Expected %v, but got %v", tc.name, tc.expectedWords, receivedWords)
+			t.Errorf("Test case: '%s' failed: Expected %v, but got %v", tc.name, tc.expectedWords, receivedWords)
 		}
 	}
 }

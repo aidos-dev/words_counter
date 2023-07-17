@@ -18,7 +18,6 @@ func CleanWords(dirtyText []byte, wordCh chan models.WordBytes) {
 
 	for i := 0; i < len(dirtyText); i++ {
 		if (dirtyText[i] >= 'A' && dirtyText[i] <= 'Z') || (dirtyText[i] >= 'a' && dirtyText[i] <= 'z') {
-
 			tempFiller = append(tempFiller, toLow(dirtyText[i]))
 		} else {
 			if len(tempFiller) > 0 {
@@ -29,9 +28,7 @@ func CleanWords(dirtyText []byte, wordCh chan models.WordBytes) {
 				tempFiller = models.WordBytes{} // clean out the tempFiller fot the next word
 
 			}
-
 		}
-
 	}
 	defer close(wordCh)
 }
