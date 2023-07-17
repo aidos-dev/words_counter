@@ -30,11 +30,11 @@ func Test_CleanWords(t *testing.T) {
 		},
 	}
 
-	wordCh := make(chan models.WordBytes)
-
-	receivedWords := []models.WordBytes{}
-
 	for _, tc := range testCases {
+
+		wordCh := make(chan models.WordBytes)
+
+		receivedWords := []models.WordBytes{}
 
 		go CleanWords(tc.dirtyText, wordCh)
 
