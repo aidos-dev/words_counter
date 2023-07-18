@@ -7,7 +7,6 @@ import (
 )
 
 func Count(wordCh chan models.WordBytes, outputCh chan []models.Output) {
-
 	const op = "Count"
 
 	outputSet := []models.Output{}
@@ -26,7 +25,6 @@ func Count(wordCh chan models.WordBytes, outputCh chan []models.Output) {
 	}
 
 	outputCh <- outputSet
-
 }
 
 /*
@@ -36,7 +34,6 @@ func countFrequency(outputSet *[]models.Output, value models.WordBytes) {
 	const op = "Count Frequency"
 
 	for i := range *outputSet {
-
 		if bytes.Equal((*outputSet)[i].Word, value) {
 			(*outputSet)[i].Number++
 			return
