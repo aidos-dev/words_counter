@@ -8,7 +8,7 @@ import (
 
 func PrintTable(outputSet sorter.SliceOfOutputs) {
 	maxWordWidth := len(IntToBytes(outputSet[0].Number))
-	var oneSpace = []byte{' '}
+	oneSpace := []byte{' '}
 
 	for i := 0; i < len(outputSet); i++ {
 		if i == 20 {
@@ -22,7 +22,6 @@ func PrintTable(outputSet sorter.SliceOfOutputs) {
 		Print(oneSpace)
 		Println(outputSet[i].Word)
 	}
-
 }
 
 func addSpaces(word []byte, maxWordWidth int) []byte {
@@ -46,7 +45,6 @@ func Print(sliceOfBytes []byte) {
 }
 
 func Println(sliceOfBytes []byte) {
-
 	sliceOfBytes = append(sliceOfBytes, '\n')
 
 	os.Stdout.Write(sliceOfBytes)

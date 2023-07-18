@@ -13,7 +13,6 @@ import (
 )
 
 func Run() {
-
 	if len(os.Args) != 2 {
 		return
 	}
@@ -38,5 +37,4 @@ func Run() {
 	sort.Sort(outputSet)
 
 	f.PrintTable(outputSet)
-
 }
