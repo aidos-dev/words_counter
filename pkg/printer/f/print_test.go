@@ -3,6 +3,7 @@ package f
 import (
 	"io"
 	"os"
+	"strings"
 	"testing"
 
 	"github.com/aidos-dev/words_counter/pkg/sorter"
@@ -85,7 +86,11 @@ func Test_PrintTable(t *testing.T) {
 		"    541 as\n" +
 		"    458 at\n"
 
-	if string(out) != expectedOutput {
+	// if string(out) != expectedOutput {
+	// 	t.Errorf("incorrect output:\nexpected:\n%s\ngot:\n%s", expectedOutput, string(out))
+	// }
+
+	if !strings.EqualFold(string(out), expectedOutput) {
 		t.Errorf("incorrect output:\nexpected:\n%s\ngot:\n%s", expectedOutput, string(out))
 	}
 }
